@@ -56,14 +56,19 @@ var zucchine = [
 
 var sommaMinore = 0;
 var sommaMaggiore = 0;
+var arrayMinore = [];
+var arrayMaggiore = [];
 
 for (var i = 0; i < zucchine.length; i++) {
   if (zucchine[i].lunghezza < 15) {
     sommaMinore += zucchine[i].peso;
+    arrayMinore.push(zucchine[i]);
   }
   else {
     sommaMaggiore += zucchine[i].peso;
+    arrayMaggiore.push(zucchine[i]);
   }
 }
 
 console.log('zucchine maggiori di 15 cm : ', sommaMaggiore, 'zucchine minori di 15 cm : ', sommaMinore);
+console.log('le zucchine < 15cm ', arrayMinore,'le zucchine < 15cm ', arrayMaggiore);
