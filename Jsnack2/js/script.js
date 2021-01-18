@@ -1,37 +1,60 @@
-// Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
-// Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
-// Generare numeri random al posto degli 0 nelle proprietà:
-// Punti fatti e falli subiti
+// Jsnack2 - Creare un array che contiene 10 oggetti che rappresentano una zucchina, indicandone per ognuno varietà, peso e lunghezza. Calcola quanto pesano tutte le zucchine.
 
-var squadre = [
+var zucchine = [
   {
-    nome: 'Inter',
-    punti: 0,
-    falli: 0
+    varieta : 'varietà 1',
+    peso : 5,
+    lunghezza : 5
   },
   {
-    nome: 'Juventus',
-    punti: 0,
-    falli: 0
+    varieta : 'varietà 2',
+    peso : 7,
+    lunghezza : 8
   },
   {
-    nome: 'Milan',
-    punti: 0,
-    falli: 0
+    varieta : 'varietà 3',
+    peso : 3,
+    lunghezza : 4
+  },
+  {
+    varieta : 'varietà 4',
+    peso : 12,
+    lunghezza : 2
+  },
+  {
+    varieta : 'varietà 5',
+    peso : 15,
+    lunghezza : 6
+  },
+  {
+    varieta : 'varietà 6',
+    peso : 3,
+    lunghezza : 9
+  },
+  {
+    varieta : 'varietà 7',
+    peso : 8,
+    lunghezza : 11
+  },
+  {
+    varieta : 'varietà 8',
+    peso : 17,
+    lunghezza : 14
+  },
+  {
+    varieta : 'varietà 9',
+    peso : 2,
+    lunghezza : 12
+  },
+  {
+    varieta : 'varietà 10',
+    peso : 6,
+    lunghezza : 9
   }
 ];
 
-for (var i = 0; i < squadre.length; i++) {
-  squadre[i].punti = generaRandom(0, 99);
-  squadre[i].falli = generaRandom(0, 99);
-  for(var k in squadre[i]){
-    console.log(k,': ',squadre[i][k]);
-  }
+var somma = 0;
+for (var i = 0; i < zucchine.length; i++) {
+  somma += zucchine[i].peso;
 }
-
-// console.log(squadre);
-
-// ****FUNZIONI****
-function generaRandom(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) ) + min;
-}
+console.log(somma);
